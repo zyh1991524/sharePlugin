@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.tz4y.plugin.share"
+      version="0.1.0">
+    <name>Share</name>
+    <description>Sample PhoneGap Share Plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,Share</keywords>
+ 
+ 
+    <js-module src="www/ShareSDK.js" name="ShareSDK">
+        <clobbers target="window.ShareSDK" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ShareSdk">
+                <param name="android-package" value="cn.sharesdk.js"/>
+            </feature>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.GET_TASKS" />
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+			<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+			<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+        </config-file>
+ 
+        <!--share java core-->
+		<source-file src="src/android/SSDKWebViewClient.java" target-dir="src/cn/sharesdk/js" />      
+        <source-file src="src/android/JSPlatformActionListener.java" target-dir="src/cn/sharesdk/js" />      
+        <source-file src="src/android/ShareSDKUtils.java" target-dir="src/cn/sharesdk/js" />   
+		
+        <source-file src="src/android/WXEntryActivity.java" target-dir="src/cn/sharesdk/js/demo/wxapi" />   
+        <source-file src="src/android/YXEntryActivity.java" target-dir="src/cn/sharesdk/js/demo/yxapi" /> 
+
+        <source-file src="src/android/CustomerLogo.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/EditPage.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/FollowList.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/OnekeyShare.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/PicViewer.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/PlatformGridView.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/Shake2Share.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/ShareContentCustomizeCallback.java" target-dir="src/cn/sharesdk/onkeyshare" />   
+        <source-file src="src/android/ShareCore.java" target-dir="src/cn/sharesdk/onkeyshare" />
+		<!-- share java core end -->
+		
+		<!-- share java lib -->
+		<source-file src="libs/android/mframework.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Core-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Douban-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Dropbox-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Email-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Evernote-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Facebook-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Flickr-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Foursquare-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-GooglePlus-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Instagram-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-KaiXin-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-KakaoStory-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-KakaoTalk-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Line-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Linkedin-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Mingdao-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-NetEaseMicroBlog-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Pinterest-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-QQ-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-QZone-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Renren-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-ShortMessage-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-SinaWeibo-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-SohuSuishenkan-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-SouhuMicroBlog-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-TencentWeibo-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Tumblr-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Twitter-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-VKontakte-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Wechat-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Wechat-Core-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Wechat-Favorite-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Wechat-Moments-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Yixin-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Yixin-Core-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-Yixin-Moments-2.4.0.jar" target-dir="libs" />
+		<source-file src="libs/android/ShareSDK-YouDao-2.4.0.jar" target-dir="libs" />
+		<!-- java lib end -->
+		
+		
+     </platform>          
+</plugin>
