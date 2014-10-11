@@ -41,15 +41,15 @@
         <source-file src="src/android/WXEntryActivity.java" target-dir="src/cn/sharesdk/js/demo/wxapi" />   
         <source-file src="src/android/YXEntryActivity.java" target-dir="src/cn/sharesdk/js/demo/yxapi" /> 
 
-        <source-file src="src/android/CustomerLogo.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/EditPage.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/FollowList.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/OnekeyShare.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/PicViewer.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/PlatformGridView.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/Shake2Share.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/ShareContentCustomizeCallback.java" target-dir="src/cn/sharesdk/onkeyshare" />   
-        <source-file src="src/android/ShareCore.java" target-dir="src/cn/sharesdk/onkeyshare" />
+        <source-file src="src/android/CustomerLogo.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/EditPage.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/FollowList.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/OnekeyShare.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/PicViewer.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/PlatformGridView.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/Shake2Share.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/ShareContentCustomizeCallback.java" target-dir="src/cn/sharesdk/onekeyshare" />   
+        <source-file src="src/android/ShareCore.java" target-dir="src/cn/sharesdk/onekeyshare" />
 		<!-- share java core end -->
 		
 		<!-- share java lib -->
